@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Animated, { SlideInLeft, SlideOutRight, ZoomIn, ZoomOut } from "react-native-reanimated";
 import { useDispatch, useSelector } from "react-redux";
 import { API_STATUS, NOTES_SCREEN } from "../constants";
 import { fetchPosts } from "../features/notesSlice";
@@ -27,15 +28,20 @@ export default function NotesScreenHome() {
 
   function renderItem({ item }) {
     return (
-      <TouchableOpacity
-        style={styles.noteCard}
-        onPress={() => navigation.navigate(NOTES_SCREEN.Details, item)}
+      <Animated.View
+        entering={ZoomIn.delay(item.index * 300)}
+        exiting={ZoomOut.delay(300)}
       >
-        <Text style={styles.noteCardTitle}>{item.title}</Text>
-        <Text style={styles.noteCardBodyText}>
-          {item.content.substring(0, 120)}
-        </Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.noteCard}
+          onPress={() => navigation.navigate(NOTES_SCREEN.Details, item)}
+        >
+          <Text style={styles.noteCardTitle}>{item.title}</Text>
+          <Text style={styles.noteCardBodyText}>
+            {item.content.substring(0, 120)}
+          </Text>
+        </TouchableOpacity>
+      </Animated.View>
     );
   }
   return (
