@@ -26,7 +26,7 @@ This is a React Native Notes app that includes user authentication and profile m
 2. **Navigate to the Project Directory**
 
     ```bash
-    cd smu-pcmob5-notes
+    cd smu-pcmob6
     ```
 
 3. **Install Dependencies**
