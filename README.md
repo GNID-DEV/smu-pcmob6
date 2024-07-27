@@ -4,23 +4,25 @@ This is a React Native Notes app that includes user authentication and profile m
 
 ## Features
 
-- **User Authentication**: Secure login with token storage using AsyncStorage.
-- **Profile Management**: Display user profile information and allow user logout.
-- **Loading Screen**: Show a loading indicator while the app checks authentication status.
+- **Authentication**: Users can log in or register with email and password.
+- **Notes Management**: Users can create, view, edit, and delete notes.
+- **Profile Management**: Users can view and edit their profile information.
+- **Camera Functionality**: Users can take photos using the device camera and save them.
 
 ## Technologies
 
-- **React Native**: Framework for building native mobile applications.
-- **React Navigation**: Navigation library for React Native.
-- **AsyncStorage**: Storage system for persisting user tokens.
-- **Axios**: HTTP client for making API requests.
+- **React Native**: Framework for building the mobile app.
+- **Redux Toolkit**: State management.
+- **Firebase**: Backend for managing notes.
+- **AsyncStorage**: Local storage for authentication tokens and photo URIs.
+- **Expo**: Provides camera and vector icon functionalities.
 
 ## Installation
 
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/smu-pcmob5-notes.git
+    git clone https://github.com/gnid-dev/smu-pcmob6.git
     ```
 
 2. **Navigate to the Project Directory**
@@ -51,12 +53,42 @@ This is a React Native Notes app that includes user authentication and profile m
 
     - Ensure that `AsyncStorage` is properly set up for storing and retrieving user tokens.
 
-## File Structure
+## Project Structure
 
-- `App.js`: Main entry point, handles navigation and authentication state.
-- `screens/LoginScreen.js`: Manages user login and authentication.
-- `screens/ProfileScreen.js`: Displays user profile and handles logout.
-- `constants.js`: Contains screen names used in navigation.
+- App.js: Main entry point for the application.
+- components/: Contains React components used throughout the app.
+- HomeStack.js: Bottom tab navigator for home screens.
+- NotesStack.js: Stack navigator for notes-related screens.
+- ProfileStack.js: Stack navigator for profile-related screens.
+- screens/: Contains screen components for different app views.
+- AuthScreen.js: Login and registration screen.
+- NotesScreenAdd.js: Screen for adding a new note.
+- NotesScreenHome.js: Home screen for viewing notes.
+- NotesScreenDetails.js: Screen for viewing note details.
+- ProfileScreen.js: Profile screen.
+- CameraScreen.js: Screen for taking and saving photos.
+- store/: Contains Redux store configuration and slices.
+- notesSlice.js: Manages the state for notes.
+- firebase.js: Firebase configuration and initialization.
+
+## Constants
+- constants.js: Contains constant values used across the app, such as API endpoints and route names.
+
+## Usage
+
+### Authentication
+
+1. Navigate to the AuthScreen to log in or register a new account.
+2. Use valid credentials to access the main features of the app.
+
+### Notes Management
+1. After logging in, navigate to the NotesStack to view, add, or manage your notes.
+2. Use the NotesScreenAdd to create a new note.
+3. View and edit notes on the NotesScreenDetails.
+
+### Profile and Camera
+1. Navigate to the ProfileStack to view and edit your profile.
+2. Use the CameraScreen to take photos and save them to your profile.
 
 ## Contributing
 
