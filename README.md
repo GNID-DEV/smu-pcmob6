@@ -55,21 +55,21 @@ This is a React Native Notes app that includes user authentication and profile m
 
 ## Project Structure
 
-- App.js: Main entry point for the application.
-- components/: Contains React components used throughout the app.
-- HomeStack.js: Bottom tab navigator for home screens.
-- NotesStack.js: Stack navigator for notes-related screens.
-- ProfileStack.js: Stack navigator for profile-related screens.
-- screens/: Contains screen components for different app views.
-- AuthScreen.js: Login and registration screen.
-- NotesScreenAdd.js: Screen for adding a new note.
-- NotesScreenHome.js: Home screen for viewing notes.
-- NotesScreenDetails.js: Screen for viewing note details.
-- ProfileScreen.js: Profile screen.
-- CameraScreen.js: Screen for taking and saving photos.
-- store/: Contains Redux store configuration and slices.
-- notesSlice.js: Manages the state for notes.
-- firebase.js: Firebase configuration and initialization.
+- **App.js**: Main entry point for the application.
+- **components/**: Contains React components used throughout the app.
+    - **HomeStack.js**: Bottom tab navigator for home screens.
+    - **NotesStack.js**: Stack navigator for notes-related screens.
+    - **ProfileStack.js**: Stack navigator for profile-related screens.
+- **screens/**: Contains screen components for different app views.
+    - **AuthScreen.js**: Login and registration screen.
+    - **NotesScreenAdd.js**: Screen for adding a new note.
+    - **NotesScreenHome.js**: Home screen for viewing notes.
+    - **NotesScreenDetails.js**: Screen for viewing note details.
+    - **ProfileScreen.js**: Profile screen.
+    - **CameraScreen.js**: Screen for taking and saving photos.
+- **store/**: Contains Redux store configuration and slices.
+    - **notesSlice.js**: Manages the state for notes.
+    - **firebase.js**: Firebase configuration and initialization.
 
 ## Constants
 - constants.js: Contains constant values used across the app, such as API endpoints and route names.
